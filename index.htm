@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Victor</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__link" href="index.htm">Home</a>
+            <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
+        </nav>
+    </header>
+    <main class="apresentacao"> <!-- classe criada para alinhar os elementos e colocada no main para todos os filhos receberem -->
+        <section class="apresentacao__conteudo"> <!-- sessão criada para separar a imagem dos outros elemetos e a imagem ficar a direita sozinha  -->
+            <h1 class="apresentacao__conteudo__titulo">Portfolio<strong class="titulo-destaque">Victor Araújo <br></strong>Formação de Front-end</h1>
+            <p class="apresentacao__conteudo__texto">Olá! Sou Victor Araújo, desenvolvedor Front-end com especialidade em HTML e CSS.</p>
+            <div class="apresentacao__links"> <!-- A (div) é ultilizada igual as tags (section) e (main) porém ela são mais estruturais "semânticos" já a (div) é para um agrupamento comum e/ou visual-->
+                <h2 class="apresentacao__links__subtitulo">Acesse minhas redes:</h2>
+                <a class="apresentacao__links__navegacao" href="https://github.com/Victor2arau">
+                    <img src="./assets/Logo Github.png" alt="logo Github">Github
+                </a>
+                <a class="apresentacao__links__navegacao" href="https://www.linkedin.com/in/victor-ara%C3%BAjo-223475227/">
+                    <img src="./assets/Logo linkedin.png" alt="logo linkedin">linkedin
+                </a>
+                <a class="apresentacao__links__navegacao" href="https://www.instagram.com/victor_arau/">
+                    <img src="./assets/instagram.png" alt="logo Instagram">Instagram
+                </a>
+
+            </div>
+        </section>
+        <img class="apresentacao__imagem" src="./assets/foto1.jpeg" alt="Foto Victor ">
+    </main>
+    <footer class="rodape">
+        <p>Desenvolvido por Victor Araújo. </p>
+    </footer>
+</body>
+</html>

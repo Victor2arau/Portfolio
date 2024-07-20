@@ -1,0 +1,144 @@
+/*fontes importadas*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+:root{
+    --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;
+    --cor-tercearia: #22D4FD;
+    --cor-quaternaria: #B5C18E;
+    --cor-quinaria: #C7B7A3;
+    --cor-hover:#272727;
+
+    --fonte-krona: "Krona One", sans-serif;
+    --fonte-Montserrat: "Montserrat", sans-serif;
+}
+
+*{/*(reset CSS) zera os parametros selecionados, pois o navegador vem com valores por default */
+    margin: 0;
+    border: 0;
+    padding: 0;
+    content: 0;
+}
+body {
+    /* height: 100vh; fazer o Body ultilizar toda a tela*/
+    box-sizing: border-box;/* (Box-sizing) serve para os elementos filhos não serem maior que o pai, e com isso evitar de uma imagem ficar maior que a tela*/
+    background-color:var(--cor-primaria);
+}
+.cabecalho{
+    padding: 2% 0 0 15%;
+}
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+}
+.cabecalho__menu__link{
+    color: var(--cor-tercearia);
+    font-family: var(--fonte-Montserrat);
+    font-size: 1.5rem; /* "REM" e ultilizado para letras*/
+    font-weight: 600;
+    text-decoration: none;
+}
+.cabecalho__menu__link:hover{
+    color: var(--cor-secundaria);
+
+}
+.apresentacao{
+    padding: 5% 15%;
+    display: flex; /* sempre que for usar a propriedade (flex box) começar por (display: flex). alinhou os elementos na horizontal*/
+    align-items: center;/* alinhar verticalmente os itens entre eles pegando como referncia o maior*/
+    justify-content: space-between;/* dar espaço entre os elementos (isso acabou colando um em cada canto da tela), iremos colocar uma margem nessa*/
+    gap: 82px;
+}
+.apresentacao__conteudo{
+    width: 50%; /* "%" e ultilizado para imagens, objetos...*/
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.apresentacao__conteudo__titulo{
+    font-size: 2.25rem;
+    font-family: var(--fonte-krona);
+}
+.apresentacao__conteudo__texto{
+    font-size: 1.5rem;
+    font-family: var(--fonte-Montserrat);
+    color: var(--cor-secundaria);
+    margin: 10px;
+    padding: 5px;
+    border-radius: 16px;
+}
+.apresentacao__links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+.apresentacao__links__subtitulo{
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-krona);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.apresentacao__links__navegacao{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2PX solid var(--cor-tercearia);
+    width: 50%;
+    text-align: center; /* alinhar o texto dentro do botão */
+    border-radius: 8px; /* raio de arredondamento das bordas do botão */
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0; /*(padding)é a distancia entre o centro e a borda. O primeiro valor é referente ao eixo horizontal e o segundo valor ao eixo vertical ou coloque só um valor que valerá para tudo*/
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-Montserrat);
+}
+.apresentacao__links__navegacao:hover{ /*É executado quando o cursor passa por cima do botão*/
+    background-color: var(--cor-hover);
+}
+
+h1 {
+    color: var(--cor-quinaria);
+}
+.titulo-destaque{ /* classe para mudar a cor de uma parte do texto dentro do strong*/
+    color: var(--cor-quaternaria);
+}
+/*span{      /* o (span) serve para destacar uma parte do texto igual ao (strong) mas, o strog diz para o HTML que o trecho está em negrito*//*
+    color: #C7B7A3;
+    border: 1px solid #22D4FD;
+    padding: 10px;
+}*/
+.apresentacao__imagem{
+    width: 50%;
+    border-radius: 16px;
+ 
+}
+.rodape{
+    color: var(--cor-primaria);
+    background-color: var(--cor-tercearia);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fonte-Montserrat)
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media(max-width:1230px){/* Media Query "@media" serve como condicional igual IF "max-width" até o determinado tamanho de tela é aplicado essa condição entre chaves  */
+    .cabecalho{
+        padding: 10%;
+    }
+    .cabecalho__menu{/*Não precisa usar o "display:flex" porque já está declarado na classe */
+        justify-content: center;
+    }
+    .apresentacao{
+        flex-direction:column-reverse;
+        padding: 5%; /* estava com 15% de padding de largura*/
+    }
+    .apresentacao__conteudo{
+        width: auto; /* estava com 50% de largura para ajustar o texto com a metade da tela e a imagem na outra metade, mas, para colocar em dispositivos moveis alterou para "auto", também poderia ser "100%" */
+    }
+}
